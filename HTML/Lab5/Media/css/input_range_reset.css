@@ -1,0 +1,92 @@
+input[type=range] {
+    -webkit-appearance: none;/*移除預設效果*/
+    width: 300px;/*滑取軸長度*/
+}
+
+/*=======chrome, safari, opera=======*/
+
+/* 滑取軸顏色 */
+input[type=range]::-webkit-slider-runnable-track {
+   -webkit-appearance: none;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 3px;
+}
+/* 滑取點 */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background: #aaa;
+}
+input[type=range]:focus { 
+    outline: none;/* 滑取點輪廓取消 */
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: rgba(0, 0, 0, 0.3);/* focus時滑曲軸顏色 */
+}
+input[type=range]:hover::-webkit-slider-thumb {
+	margin-top: -1px;
+    height: 7px;
+    width: 7px;
+}
+
+/*=======firefox=======*/
+/* 滑取軸顏色 */
+input[type=range]::-moz-range-track {
+    height: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 3px;
+}
+/* 滑取點 */
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background: #aaa;
+}
+input[type=range]:focus::-moz-range-track {
+    background: rgba(0, 0, 0, 0.3);/* focus時滑曲軸顏色 */
+}
+input[type=range]:hover::-moz-range-thumb {
+	margin-top: -1px;
+    height: 7px;
+    width: 7px;
+}
+/*=======interent explorer 10以上=======*/
+input[type=range]::-ms-track {
+    height: 5px;
+    background: transparent;/* 設預設背景為透明 */
+    border-width: 6px 0;/* 預留邊框，但顏色設為透明(避免擠壓到滑取點) */
+    border-color: transparent;
+    color: transparent;/* 移除IE度量條 */
+}
+/* 滑取點 */
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+/* 選取軸 左邊顏色 */
+input[type=range]::-ms-fill-lower {
+    background: black;
+    border-radius: 10px;
+}
+/* 選取軸 右邊顏色 */
+input[type=range]::-ms-fill-upper {
+    background: green;
+    border-radius: 10px;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: blue;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: yellow;
+}
