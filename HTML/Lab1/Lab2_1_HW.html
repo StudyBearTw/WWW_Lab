@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Map</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+    <map name="workmap">
+        <area shape="rect" coords="291, 175, 337, 248" href="phone.htm" alt="手機" title="點擊以了解手機">
+        <area shape="rect" coords="287, 254, 380, 345" href="coffee.htm" alt="咖啡" title="點擊以了解咖啡">
+        <area shape="rect" coords="32, 45, 273, 349" href="computer.htm" alt="電腦" title="點擊以了解電腦">
+    </map>
+</body>
+</html>
