@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab3_3</title>
+  <script type="text/javascript">
+    // 提示輸入五個數字，並轉換為數字陣列
+    var input = prompt("請輸入五個數字，以逗號分隔:");
+    var numbers = input.split(",").map(Number); // 轉換為數字陣列
+  </script>
+</head>
+<body>
+  <!-- onclick 點擊事件 -->
+  <button onclick="findMax()">Function Maximum</button>
+  <button onclick="findMin()">Function Minimum</button>
+  <button onclick="findAvg()">Function Average</button>
+  <p id="display"></p>
+
+  <script>
+    var display = document.querySelector("#display");
+
+    // 最大值函數
+    function findMax() {
+        let max = Math.max(...numbers);
+        alert("Maximum: " + max);
+        display.innerHTML += "最大值：" + max + "<br>";
+    }
+
+    // 最小值函數
+    function findMin() {
+        let min = Math.min(...numbers);
+        alert("Minimum: " + min);
+        display.innerHTML += "最小值：" + min + "<br>";
+    }
+
+    // 平均值函數
+    function findAvg() {
+        let sum = numbers.reduce((acc, num) => acc + num, 0);
+        let avg = sum / numbers.length;
+        alert("Average: " + avg.toFixed(2));
+        display.innerHTML += "平均值：" + avg.toFixed(2) + "<br>";
+    }
+  </script>
+</body>
+</html>
+

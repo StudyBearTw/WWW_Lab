@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculating Compound Interest</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    <script>
+        var principal = 1000.0; // 本金
+        var years = 10; // 計算10年的利息
+
+        document.addEventListener("DOMContentLoaded", function () {
+            var output = "<table><caption>Compound Interest for Different Rates</caption>";
+            output += "<thead><tr><th>Year</th>";
+
+            // 印出利率標題
+            for (var rate = 5; rate <= 10; rate++) {
+                output += "<th>" + rate + "% Interest</th>";
+            }
+            output += "</tr></thead><tbody>";
+
+            // 計算不同年份和利率的複利
+            for (var year = 1; year <= years; year++) {
+                output += "<tr><td>" + year + "</td>";
+                
+                for (var rate = 5; rate <= 10; rate++) {
+                    var interestRate;
+                    switch (rate) {
+                        case 5: interestRate = 0.05; break;
+                        case 6: interestRate = 0.06; break;
+                        case 7: interestRate = 0.07; break;
+                        case 8: interestRate = 0.08; break;
+                        case 9: interestRate = 0.09; break;
+                        case 10: interestRate = 0.10; break;
+                        default: interestRate = 0.05; // 預設值
+                    }
+                    var amount = principal * Math.pow(1.0 + interestRate, year);
+                    output += "<td>" + amount.toFixed(2) + "</td>";
+                }
+                output += "</tr>";
+            }
+
+            output += "</tbody></table>";
+            document.body.innerHTML = output;
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Calculating Compound Interest</title>
+    <style type="text/css">
+      table {
+        width: 100%;
+      }
+      th {
+        text-align: left;
+      }
+    </style>
+    <script type="text/javascript">
+      <!--
+      var amount; // current amount of money
+      var principal = 1000.0; // principal amount
+      var rate = 0.05; // interest rate
+
+      document.writeln('<table border = "1">'); // begin the table
+      document.writeln("<caption>Calculating Compound Interest</caption>");
+      document.writeln("<thead><tr><th>Year</th>"); // year column heading
+      document.writeln("<th>Amount on deposit</th>"); // amount column heading
+      document.writeln("</tr></thead><tbody>");
+
+      // output a table row for each year
+      for (var year = 1; year <= 10; ++year) {
+        amount = principal * Math.pow(1.0 + rate, year);
+        document.writeln(
+          "<tr><td>" + year + "</td><td>" + amount.toFixed(2) + "</td></tr>"
+        );
+      } //end for
+
+      document.writeln("</tbody></table>");
+      // -->
+    </script>
+  </head>
+  <body></body>
+</html>
