@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>音樂播放器</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/input_range_reset.css" />
+  <link rel="icon" type="image/png" href="cover/icon.png" />
+</head>
+<body>
+<div id="bg"></div>
+<div id="player">
+  <div class="cover"></div>
+  <div class="ctrl">
+    <div class="tag">
+      <strong>Title</strong>
+      <span class="artist">Artist</span>
+      <span class="album">Album</span>
+    </div>
+    <div class="control">
+      <div class="left">
+        <div id="rewind" class="rewind icon"></div>
+        <div id="play" class="playback icon"></div>
+        <div id="fastforward" class="fastforward icon"></div>
+        <div id="stop" class="stop icon"></div>
+        <div id="shuffle" class="shuffle icon"></div>
+        <div id="repeat" class="repeat icon"></div>
+      </div>
+      <div class="volume right">
+        <div id="mute" class="mute icon left"></div>
+        <div class="slider left">
+          <input type="range" id="pace" class="pace" min="0" max="1" step="0.1" />
+        </div>
+      </div>
+    </div>
+    <div class="progress">
+      <div class="slider">
+        <input type="range" id="progress" class="pace" min="0" max="100" step="0.1" value="0" />
+      </div>
+      <div class="timer left">0:00</div>
+      <div class="timer right"><span id="total-time">0:00</span></div>
+    </div>
+  </div>
+</div>
+<ul id="playlist"></ul>
+
+<script type="module">
+  import { playlist } from './JS/data.js';
+  import { Player } from './JS/player.js';
+  import { UI } from './JS/ui.js';
+
+  const audio = new Audio();
+  const player = new Player(audio, playlist);
+  const ui = new UI(player, playlist);
+
+  player.init();
+  ui.init();
+</script>
+</body>
+</html>
