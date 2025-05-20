@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>小畫布</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="mycanvas" width="800" height="600"></canvas>
+
+<div id="control">
+    <!-- 顏色按鈕 -->
+    <div id="color-buttons">
+        <button class="btncol" data-color="red" style="background-color:red"></button>
+        <button class="btncol" data-color="orange" style="background-color:orange"></button>
+        <button class="btncol" data-color="yellow" style="background-color:yellow"></button>
+        <button class="btncol" data-color="green" style="background-color:green"></button>
+        <button class="btncol" data-color="blue" style="background-color:blue"></button>
+        <button class="btncol" data-color="indigo" style="background-color:indigo"></button>
+        <button class="btncol" data-color="purple" style="background-color:purple"></button>
+        <button class="btncol" data-color="white" style="background-color:white">橡皮擦</button>
+    </div>
+
+    <!-- 模式與清除 -->
+    <button id="modeToggle">模式：畫筆</button>
+    <button id="clear" style="background-color:gray">清除</button>
+
+    <!-- 筆刷粗細 -->
+    <label>
+        筆刷粗細：
+        <input type="range" id="brushSize" min="1" max="50" value="5">
+        <span id="sizeValue">5</span> px
+    </label>
+</div>
+
+<div id="show_mouse"></div>
+
+<!-- 載入順序很重要 -->
+<script src="canvas.js"></script>
+<script src="control.js"></script>
+</body>
+</html>
