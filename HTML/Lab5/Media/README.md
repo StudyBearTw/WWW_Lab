@@ -1,48 +1,90 @@
-# 小畫布 (HTML5 Canvas Paint)
+# HTML5 音樂播放器
 
-這是一個簡易的 HTML5 Canvas 小畫布應用程式，支援多種顏色、筆刷粗細調整、模式切換（畫筆/填滿）、橡皮擦與清除畫布功能。適合用於學習 Canvas API 與前端互動設計。
+這是一個使用 HTML5、CSS3 與原生 JavaScript 製作的網頁音樂播放器，支援播放清單、音量控制、靜音、隨機播放、重複播放等功能，並有美觀的 UI 介面。
+
+## 目錄結構
+
+```
+index.html
+css/
+  ├─ style.css
+  └─ input_range_reset.css
+JS/
+  ├─ data.js
+  ├─ player.js
+  └─ ui.js
+cover/
+  ├─ gundam.jpg
+  ├─ icon.png
+  ├─ 夢幻.jpg
+  └─ 深愛.jpg
+images/
+  ├─ bg.jpg
+  ├─ fastforward.png
+  ├─ mute.png
+  ├─ pause.png
+  ├─ play.png
+  ├─ playing.png
+  ├─ repeat.png
+  ├─ rewind.png
+  ├─ shuffle.png
+  ├─ stop.png
+  └─ volume.png
+music/
+  ├─ AlbumArtSmall.jpg
+  └─ Folder.jpg
+```
 
 ## 功能特色
 
-- 多種顏色選擇，並有橡皮擦功能
-- 筆刷粗細可調整
-- 畫筆模式與填滿模式切換
-- 一鍵清除畫布
-- 即時顯示滑鼠座標
-
-## 專案結構
-
-```
-canvas.js        # Canvas 畫布邏輯
-control.js       # 控制面板與 UI 互動
-index.html       # 主頁面
-style.css        # 樣式表
-.idea/           # 開發環境設定檔
-```
+- 播放/暫停/停止/上一首/下一首
+- 播放清單顯示與切換
+- 封面顯示
+- 進度條與時間顯示
+- 音量調整與靜音
+- 隨機播放與重複播放模式
+- 音量記憶（localStorage）
 
 ## 使用方式
 
-1. 將專案所有檔案放在同一資料夾。
-2. 使用瀏覽器開啟 `index.html`。
-3. 開始繪圖！
+1. **下載或複製本專案**
+2. 將專案資料夾內容放在本機或伺服器上
+3. 直接用瀏覽器開啟 `index.html` 即可使用
 
 ## 檔案說明
 
-- [`index.html`](index.html)：主頁面，包含 Canvas 與控制面板。
-- [`canvas.js`](canvas.js)：負責 Canvas 畫圖、填滿、清除等功能。
-- [`control.js`](control.js)：負責顏色、筆刷、模式等 UI 控制。
-- [`style.css`](style.css)：頁面與控制面板的美化樣式。
+- [`index.html`](index.html)：主頁面，載入播放器 UI。
+- [`css/style.css`](css/style.css)：播放器樣式。
+- [`css/input_range_reset.css`](css/input_range_reset.css)：自訂 input range 樣式。
+- [`JS/data.js`](JS/data.js)：播放清單資料。
+- [`JS/player.js`](JS/player.js)：播放器核心邏輯，負責音訊控制。
+- [`JS/ui.js`](JS/ui.js)：UI 控制與 DOM 綁定。
+- [`cover/`](cover/)：專輯封面圖。
+- [`images/`](images/)：播放器控制圖示與背景。
 
-## 預覽畫面
+## 播放清單擴充
 
-![畫布預覽](https://user-images.githubusercontent.com/your-image-link.png)
+可在 [`JS/data.js`](JS/data.js) 中新增或修改歌曲資訊：
 
-## 開發環境
+```js
+export const playlist = [
+  {
+    album: "專輯名稱",
+    track: "歌曲名稱",
+    artist: "歌手",
+    cover: "cover/xxx.jpg",
+    mp3: "音樂檔案網址",
+  },
+  // ...更多歌曲
+];
+```
 
-- HTML5
-- JavaScript (ES6)
-- CSS3
+## 瀏覽器支援
 
-## 版權
+- 建議使用最新版 Chrome、Firefox、Edge 或 Safari
 
-本專案僅供學術與教學用途。
+## 授權
+
+本專案僅供學習與教學用途，音樂檔案請依照相關授權規範使用。
+
+---
