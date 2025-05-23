@@ -11,7 +11,7 @@
 * HTML：結構化網頁內容
 * CSS：設計與美化網頁
 * JavaScript：增加互動性與動態效果
-* PHP：後端資料處理與伺服器互動([GitHub Docs][1])
+* PHP：後端資料處理與伺服器互動
 
 本專案適合初學者作為練習平台，也可作為教學輔助資源。
 
@@ -21,9 +21,7 @@
 
 ```
 WWW_Lab/
-├── HTML/         # HTML 範例與練習
-├── CSS/          # CSS 樣式與佈局
-├── JS/           # JavaScript 程式碼
+├── HTML/         # HTML, JS, CSS 範例與練習
 ├── PHP/          # PHP 腳本與後端邏輯
 ├── LICENSE       # 授權條款（MIT）
 └── README.md     # 專案說明文件
