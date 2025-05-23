@@ -78,7 +78,3 @@ WWW_Lab/
 ## 🙋‍♂️ 聯絡方式
 
 如有任何問題或建議，歡迎透過 GitHub Issues 提出，或聯絡專案作者：[@StudyBearTw](https://github.com/StudyBearTw)。
-
----
-
-如果您有特定的內容想要新增，例如：學習目標、功能展示、部署方式或貢獻指南，請提供相關資訊，我可以協助您進一步完善 `README.md` 文件。
